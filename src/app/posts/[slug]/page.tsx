@@ -5,6 +5,7 @@ import { urlFor } from "@/sanity/lib/image"
 import { PortableText } from 'next-sanity'
 import { FiUser } from "react-icons/fi";
 import { MdOutlineDateRange } from "react-icons/md";
+import Comments from '@/app/components/Comments'
 
 const page = async ({ params: { slug } }: { params: { slug: string } }) => {
   const query = `*[_type == 'blog' && slug.current == "${slug}"]{
@@ -34,7 +35,7 @@ const page = async ({ params: { slug } }: { params: { slug: string } }) => {
             <div className="flex flex-col items-start">
               {/* Date and Author Side by Side */}
               <div className="flex items-center justify-start mb-6">
-                <h4 className="flex items-center text-base text-gray-700 font-semibold mr-8">
+                <h4 className="flex items-center text-lg text-gray-700 font-semibold mr-8">
                   <MdOutlineDateRange className="mr-2" />
                   {data.publishedAt}
                 </h4>
@@ -45,8 +46,9 @@ const page = async ({ params: { slug } }: { params: { slug: string } }) => {
               </div>
 
               {/* Text Section */}
-              <section className='space-y-4'>
+              <section className='space-y-4 md:text-xl text-lg'>
                 <PortableText value={data.block} />
+                <Comments />
               </section>
             </div>
           </div>

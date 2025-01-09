@@ -29,9 +29,6 @@ export default function Footer() {
                   <a href="#about" className="hover:text-gray-500">About</a>
                 </li>
                 <li>
-                  <a href="#blog" className="hover:text-gray-500">Blog</a>
-                </li>
-                <li>
                   <a href="#contact" className="hover:text-gray-500">Contact</a>
                 </li>
               </ul>
@@ -75,7 +72,7 @@ export default function Footer() {
   
           {/* Copyright */}
           <div className="mt-6 text-center md:text-lg text-black">
-            &copy; 2025 <span className="font-dancing text-xl font-semibold">Bloom Haven</span>. All Rights Reserved.
+            &copy; 2024 <span className="font-dancing text-xl font-semibold">Bloom Haven</span>. All Rights Reserved.
           </div>
         </div>
       </footer>
