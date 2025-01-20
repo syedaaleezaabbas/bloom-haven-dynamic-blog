@@ -3,7 +3,7 @@ type Blog = {
     publishedAt: number,
     authorName: string,
     paragraph: string,
-    image: any,
+    image: string,
     slug: string,
     block: string
 }

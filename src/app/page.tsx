@@ -15,7 +15,7 @@ export default async function Home() {
   }`
 
   const data: Blog[] = await client.fetch(query)
-  console.log(data)
+  // console.log(data)
 
   return (
     <>

@@ -16,6 +16,7 @@ const page = async ({ params: { slug } }: { params: { slug: string } }) => {
   }[0]`
 
   const data = await client.fetch(query)
+  console.log(data)
   return (
     <>
       <div className="min-h-screen bg-gray-50 text-gray-800">
