@@ -15,7 +15,7 @@ const page = async ({ params: { slug } }: { params: { slug: string } }) => {
     block
   }[0]`
 
-  const data = await client.fetch(query)
+  const data = await client.fetch(query, {}, { cache: 'no-cache'})
   console.log(data)
   return (
     <>
