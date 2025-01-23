@@ -14,7 +14,7 @@ export default async function Home() {
       image
   }`
 
-  const data: Blog[] = await client.fetch(query)
+  const data: Blog[] = await client.fetch(query, {}, { cache: 'no-cache'})
   // console.log(data)
 
   return (

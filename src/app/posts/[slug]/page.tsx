@@ -36,18 +36,18 @@ const page = async ({ params: { slug } }: { params: { slug: string } }) => {
             <div className="flex flex-col items-start">
               {/* Date and Author Side by Side */}
               <div className="flex items-center justify-start mb-6">
-                <h4 className="flex items-center text-lg text-gray-700 font-semibold mr-8">
+                <h4 className="flex items-center md:text-lg text-gray-700 font-semibold mr-8">
                   <MdOutlineDateRange className="mr-2" />
                   {data.publishedAt}
                 </h4>
-                <h4 className="flex items-center text-lg text-gray-700 font-semibold">
+                <h4 className="flex items-center md:text-lg text-gray-700 font-semibold">
                   <FiUser className="mr-2" />
                   {data.authorName}
                 </h4>
               </div>
 
               {/* Text Section */}
-              <section className='space-y-4 md:text-xl text-lg'>
+              <section className='space-y-4 md:text-lg'>
                 <PortableText value={data.block} />
                 <Comments />
               </section>
